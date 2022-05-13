@@ -1,0 +1,100 @@
+@import '../../global.scss';
+
+.contact{
+    background-color: white;
+    display: flex;
+
+    @include mobile{
+        flex-direction: column;
+    }
+
+    .left{
+        flex: 1;
+
+        img{
+            height: 90%;
+            width: 100%;
+            overflow: hidden;
+        }
+    }
+
+    .right{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        h2{
+            padding-right: 110px;
+            font-size: 50px;
+            @include mobile{
+                font-size: 40px;
+                margin-left: 100px;
+            }
+            
+        }
+
+        form{
+            width: 60%;
+            height: 70%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            
+
+            input{
+                width: 300px;
+                height: 30px;
+                font-size: 14px;
+                margin-top: 10px;
+
+                @include mobile{
+                    width: 200px;
+                    height: 20px;
+                    
+                }
+            }
+
+            textarea{
+                width: 300px;
+                height: 200px;
+                font-size: 14px;
+                margin-top: 10px;
+
+                @include mobile{
+                    width: 200px;
+                    height: 120px;
+                    
+                }
+            }
+
+            button{
+                width: 150px;
+                height: 30px;
+                background-color: black;
+                color: white;
+                border-radius: 10px;
+                border: none;
+                margin-top: 5px;
+                cursor: pointer;
+                &:focus{
+                    outline: none;
+                }
+            }
+            .spanText{
+                width: 300px;
+                height: 20px;
+                padding: 23px;
+                margin-top: 10px;
+                color: rgb(0, 0, 0);
+                background-color: rgb(169, 252, 169);
+                border-radius: 5px;
+                font-weight: bolder;
+                font-size: 16px;
+                overflow: hidden;
+                opacity: 0.8;
+            }
+        }
+    }
+}
